@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Froggo | Comment on any website</title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <h2 class="text-center">Comment on any webpage</h2>
+
+          <img src="images/screenshot.png" class="img-responsive" style="margin: auto; width: 100%;" />
+
+          <div class="wrapper">
+            <ol class="disc">
+              <li>Install extension</li>
+              <li>Sign-in</li>
+              <li>Start discussing on any url</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="col-md-2 hidden-sm hidden-xl hidden-xs">
+          <div class="or-spacer-vertical left">
+            <div class="mask"></div>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <h2 class="text-center">Froggo</h2>
+
+          <img src="images/froggo.png" class="img-responsive" style="width: 150px; margin: auto;" />
+
+          <img src="images/chrome.svg" class="img-responsive" style="width: 110px; margin: 0 auto 28px auto;" />
+
+          <a href="#" class="download-button"><i class="fa fa-download"></i>Download ver 1.0</a>
+
+          <% if (!user) {%>
+            <a href="#" class="btn btn-block btn-social btn-lg btn-google">
+              <i class="fa fa-google"></i>Sign in with Google
+            </a>
+
+            <div class="or-spacer">
+              <div class="mask"></div>
+              <span><i>or</i></span>
+            </div>
+
+            <a href="#" class="btn btn-block btn-social btn-lg btn-facebook">
+              <i class="fa fa-facebook"></i>Sign in with Facebook
+            </a>
+          <%} else {%>
+            Hello, <%= user.displayName %>
+          <%}%>
+        </div>
+      </div>
+
+      <hr/>
+
+      <footer>
+        <p>&copy; 2017 Froggo, Inc.</p>
+      </footer>
+    </div>
+  </body>
+</html>
